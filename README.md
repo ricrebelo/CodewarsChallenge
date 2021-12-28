@@ -1,4 +1,4 @@
 # CodewarsChallenge
-Challenge for an intreview
+Challenge for an intreview process
 
-- Ricardo Rebelo 2021
+by Ricardo Rebelo 2021
