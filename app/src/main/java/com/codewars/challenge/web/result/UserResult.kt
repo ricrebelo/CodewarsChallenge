@@ -17,7 +17,7 @@ data class UserResult(
     @SerializedName("ranks")
     val ranks: Ranks,
     @SerializedName("skills")
-    val skills: List<Any>,
+    val skills: List<String>,
     @SerializedName("username")
     val username: String
 ) {
@@ -32,7 +32,7 @@ data class UserResult(
         @SerializedName("languages")
         val languages: Languages,
         @SerializedName("overall")
-        val overall: Overall
+        val overall: CodeLanguage
     ) {
         data class Languages(
             @SerializedName("c")
@@ -137,20 +137,9 @@ data class UserResult(
             val typescript: CodeLanguage,
             @SerializedName("vb")
             val vb: CodeLanguage
-        ) {
-            data class CodeLanguage(
-                @SerializedName("color")
-                val color: String,
-                @SerializedName("name")
-                val name: String,
-                @SerializedName("rank")
-                val rank: Int,
-                @SerializedName("score")
-                val score: Int
-            )
-        }
+        )
 
-        data class Overall(
+        data class CodeLanguage(
             @SerializedName("color")
             val color: String,
             @SerializedName("name")
