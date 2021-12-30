@@ -2,7 +2,7 @@ package com.codewars.challenge.di
 
 import android.content.Context
 import androidx.room.Room
-import com.codewars.challenge.database.dao.UserDao
+import com.codewars.challenge.database.dao.ChallengesDao
 import com.codewars.challenge.database.database.AppDatabase
 import com.codewars.challenge.web.Endpoints
 import com.codewars.challenge.web.ApiManager
@@ -29,7 +29,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideUserDao(db: AppDatabase) : UserDao = db.userDao()
+    fun provideUserDao(db: AppDatabase) : ChallengesDao = db.challengesDao()
 
     @Singleton
     @Provides
